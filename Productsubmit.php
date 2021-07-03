@@ -1,4 +1,7 @@
 <?php 
+session_start(); 
+?>
+<?php 
 $host = "ec2-107-21-10-179.compute-1.amazonaws.com"; 
 $db_name = "datp6s3j2j1ord";
 $db_username = "qxgfwfurdxxrlz";
@@ -13,12 +16,10 @@ password = $db_password";
     $name = $_POST['Name']; 
     $category = $_POST['Category']; 
     $amount = $_POST['Amount']; 
-	$pg_conn = pg_connect($conn_string);
-
-//echo ("Connect successfully!"); 
+    $pg_conn = pg_connect($conn_string);
 
 $result = pg_query($pg_conn, "INSERT INTO product (ID, shop, name, category, amount) VALUES ('$ID', '$shop', '$name', '$category', '$amount');");
-//echo ("Connect successfully!"); 
+
 if ( $result ) {
         
         function function_alert($message) {

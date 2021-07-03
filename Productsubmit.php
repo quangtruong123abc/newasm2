@@ -30,3 +30,4 @@ if ( $result ) {
         function_alert("Record Successfully Added!");
     }
 } 
+?>
